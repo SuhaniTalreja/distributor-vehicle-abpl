@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SLIPGENERATION_MASTER.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Slip Generator</title>
+    <link href="css/StyleSheet2.css" rel="stylesheet" />
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+               
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar">
+            <img src="../pictures/abpl_logo.jpg" class="abpl-logo"/>
+            <a href="input_page.aspx" class="navbar-item" style="color:white; font-size:0.9rem; text-decoration:none"> Input Details </a>
+            <a href="create_dist.aspx" style="color:white; font-size:0.9rem;  text-decoration:none"> Create Distributor </a>
+            <a href="create_vehicle.aspx" style="color:white; font-size:0.9rem;  text-decoration:none"> Create Vehicle </a>
+            <a href="slip_print.aspx" style="color:white; font-size:0.9rem;  text-decoration:none">Print Slip</a>
+            <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" class="navbar-item" style="color:white; text-decoration:none">Log Out</asp:LinkButton>
+            <img src="../pictures/HD_White_Coca_Cola_Logo_PNG-removebg.png" class="cocacola"/>
+        </div>
+        <div >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>          
+        </div>
+    </form>
+    
+    <script src="javascript/JavaScript.js"></script>
+</body>
+</html>

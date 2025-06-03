@@ -1,0 +1,180 @@
+﻿body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f0f0f0;
+}
+
+.navbar {
+    height: 50px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.abpl-logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.cocacola {
+    height: 60px;
+    width: 80px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    align-content:center;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+input, select {
+    font-size: 14px;
+    padding: 8px 8px 8px 4px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: transparent;
+}
+
+    input:focus, select:focus {
+        outline: none;
+    }
+
+label {
+    color: #999;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label,
+select:focus ~ label, select:valid ~ label {
+    top: -15px;
+    font-size: 10px;
+    color: #5264AE;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+    .bar:before, .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #5264AE;
+        transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+input:focus ~ .bar:before, input:focus ~ .bar:after,
+select:focus ~ .bar:before, select:focus ~ .bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 50%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+input:focus ~ .highlight, select:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23757777" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 5px;
+}
+
+.form-group-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btnSubmit, .btnClear {
+    width: 40%;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.btnSubmit {
+    background-color: lawngreen;
+}
+
+    .btnSubmit:hover {
+        background-color: greenyellow;
+        cursor: pointer;
+    }
+
+.btnClear {
+    background-color: red;
+}
+
+    .btnClear:hover {
+        background-color: orangered;
+        cursor: pointer;
+    }
+
+.error-msg {
+    color: red;
+    text-decoration: none !important;
+}
+
